@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header-title">HOME WOK</h1>
+    </header>
+
+    <main class="main container" id="app">
+        <div class="main-box">
+
+            <div class="box-one">
+                <button @click="color = 'green'">Yashil</button>
+                <button @click="color = 'blue'">Ko'k</button>
+                <button @click="color = 'red'">Qizil</button>
+            </div>
+
+            <div class="box-two">
+                <input :class="color" type="text" v-model="word" />
+                <p :class="color" v-if="word == ''">Hech narsa kiritilmagan</p>
+                <p :class="color" v-else-if="word != number">Son kiriting</p>
+                <p :class="color" v-else-if="word <= 20">Siz {{ number }} kiritingiz</p>
+                <p :class="color" v-else>Siz 20 dan katta son kiritingiz</p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
